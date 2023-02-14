@@ -25,15 +25,11 @@ const Profile = () => {
                 </section>
 
                 <section className={styles.description}>
-                    <h2>Hola, soy Julián, desarrollador frontend</h2>
-                    <p>
-                        Desde niño me ha gustado tocar guitarra, tambi&eacuten me dedico a leer porque me gusta enterarme de
-                        los hechos que han marcado la actualidad. <br />Espero sea de su agrado mi sitio 😉
-                    </p>
+                    {/* <h2>Hola, soy Julián, desarrollador frontend</h2> */}
                 </section>
 
                 <section className={styles.study}>
-                    <h2>Mis logros</h2>
+                    {/* <h2>Mis logros</h2> */}
                 </section>
 
             </section>
