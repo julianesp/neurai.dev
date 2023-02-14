@@ -1,0 +1,31 @@
+.borde-right {
+  border: 1px double #baba;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #baba;
+}
+.borde-left {
+  border: 1px double #baba;
+  border-radius: 10px;
+  box-shadow: -10px 10px 10px #baba;
+}
+
+.flex-sbetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-left {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.flex-right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}

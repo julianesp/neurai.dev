@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react"
+import Layout from "../components/Layout"
+// import Accesorios from "../containers/Accesorios"
+import Profile from '../pages/profile'
 
-const index = () => {
+const Index = () => {
   return (
-    <div>
-        <h1>inicio</h1>
-    </div>
+    <Layout>
+      <Profile/>
+      {/* <Accesorios/> */}
+    </Layout>
   )
 }
 
-export default index
+export default Index
