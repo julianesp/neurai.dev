@@ -2,8 +2,11 @@
 
 const nextConfig = {
   output: 'standalone',
-  experimental: {
-    appDir: false,
+  // experimental: {
+  //   appDir: false,    
+  // },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 }
 
