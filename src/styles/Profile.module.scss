@@ -1,190 +1,158 @@
-@import "./colors.module";
-@import "./heredar.module";
+@import "./heredar.scss";
 
 .dev {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  justify-items: center;
+  /* @import flex-center; */
+  display: flex;
   align-items: center;
-  background-color: $color-fondo-soft;
-  /* padding: 50px; */
-  /* margin-top: 20px;
-    margin-bottom: 50px; */
-  height: 350px;
+  flex-direction: column;
 
-  & img {
-    width: 290px;
-    height: 290px;
+  margin-top: 3.75rem;
 
-    border-radius: 50%;
+  position: relative;
 
-    transition: 0.3s ease-in;
-    transform: scale(1);
+  z-index: 1000;
 
-    &:hover {
-      transition: 0.4s ease-out;
-      transform: scale(1.3);
-    }
-  }
+  .description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  & .description {
-    padding: 0 50px;
-    animation-name: aparecer;
-    animation-duration: 2.5s;
+    margin-bottom: .5rem;
 
-    background-color: #baba;
+    height: 10.375rem;
 
     width: 100%;
 
-    & h2 {
-      font-size: 2rem;
-      // color: #000;
-      font-weight: 500;
+    p {
+      color: #fff;
+      font-size: 1.5rem;
       text-align: center;
-      // -webkit-text-stroke: 1px black;
-      color: $color-vivo;
+
+      span:nth-child(1) {
+        display: flex;        
+
+        /* color: red; */
+
+        animation-name: showFirst;
+        animation-duration: 1s;
+
+        
+      }
+      span:nth-child(2) {
+        display: flex;
+
+        /* color: blue; */
+
+        animation-name: showSecond;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        display: flex;
+
+        animation-name: showThird;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        
+        opacity: 0;
+
+        
+      }
+
+      > {
+        display: flex;
+
+        animation-name: aumento;
+        animation-duration: 2s;
+        animation-delay: 3s; 
+        animation-fill-mode: forwards;
+        
+        opacity: 0;
+      }
+    }
+    
+    @keyframes showFirst {
+      0% {
+        
+        
+        transform: translateX(-200px);
+      }
+      
+      100% {
+        
+        transform: translateX(0);
+        
+      }
     }
 
-    & p {
-      color: #000;
-      font-size: 1.2em;
-      font-weight: 400;
-      justify-self: center;
-      align-items: center;
-      line-height: 40px;
-      letter-spacing: 1px;
-      padding: 20px;
+    @keyframes showSecond {
+      0% {
+        
+        transform: translateY(-100px);
+      }
+      
+      100% {        
+        transform: translateY(0);
+        opacity: 1;
+        
+      }
+    }
+    
+    @keyframes showThird {
+      0% {        
+        transform: translateY(100px);
+        
+      }
+      
+      100% {        
+        transform: translateY(0);
+        opacity: 1;        
+      }
+    }
+
+    @keyframes aumento {
+      0% {
+        
+        transform: scale(1);
+      }
+      
+      100% {        
+        transform: scale(2.4);
+        opacity: 1;    
+      }
     }
   }
 
-  @keyframes aparecer {
-    0% {
-      transform: scale(0.5);
-      transition: all 2s ease-out;
+
+  .presentation {
+    .me {
+      border-radius: 50%;
+
+      width: 200px;
+      height: 200px;
+
+      animation: aparecer;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      animation-delay: 3s;
 
       opacity: 0;
     }
 
-    100% {
-      transform: scale(1);
-      transition: all 2s ease-out;
-
-      opacity: 1;
-    }
-  }
-}
-
-.portfolio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-right: auto;
-  margin-bottom: 20px;
-  margin-left: auto;
-  // background-color: navajowhite;
-  background-color: #baba;
-  border-radius: 30px;
-  height: 300px;
-  width: 80%;
-
-  & .empresa-container {
-    display: flex;
-
-    & .empresa {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid $color-shadow;
-      border-radius: 50%;
-      background-color: #fff;
-      margin: 0 25px;
-      //padding: 25px;
-      width: 100px;
-      text-align: center;
-      font-size: 15px;
-      transition: 0.2s ease-in;
-
-      &:hover:nth-child(1) {
-        //box-shadow: 15px 15px 15px #baba;
-        @extend .borde-left;
-        transform: scale(1.2);
+    @keyframes aparecer {
+      0% {
+        opacity: 0;
       }
 
-      &:hover:nth-child(2) {
-        //box-shadow: 15px 15px 15px #baba;
-        @extend .borde-right;
-        transform: scale(1.1);
+      100% {
+        opacity: 1;
       }
-
-      & img {
-        width: 50px;
-        padding-bottom: 20px;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .dev {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-
-    
-    background: linear-gradient(
-      180deg,
-      rgba(100, 212, 255, .7) 20%,
-      rgba(200, 242, 11, 0.7) 40%,
-      rgba(200, 0, 36, .7) 85%
-    );
-
-    height: auto;
-
-    & .description {
-      padding: 0 10px;
-      display: flex;
-      flex-direction: column;
-
-      & h2 {
-        font-size: 1.3rem;
-        font-weight: 700;
-        color: $color-dark;
-        margin-top: 20px;
-      }
-
-      & p {
-        font-size: 1rem;
-        padding: 0;
-        text-align: center;
-      }
-    }
-
-    & img {
-      margin-top: 20px;
-    }
-  }
-
-  .portfolio {
-    margin: 0;
-    margin-bottom: 30px;
-    width: 100%;
-    height: 400px;
-    border-radius: unset;
-
-    & .title {
-      color: $color-claro;
-      border: 1px solid $color-claro;
-      border-radius: 10px;
-      margin-bottom: 15px;
-
-      width: 150px;
-      text-align: center;
-    }
-
-    & .empresa-container {
-      flex-direction: column;
     }
   }
 }

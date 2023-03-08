@@ -37,3 +37,7 @@ next-env.d.ts
 
 # hidden files
 /src/assets/
+
+/src/styles/*.css.*
+/src/styles/*.css
+/src/styles/*.module.*

@@ -15,18 +15,23 @@ const Profile = () => {
             </Head>
 
             <section className={styles.dev}>
-                <section className={styles.img}>
+
+                <section className={styles.description}>
+                    <p>
+                        <span>Hola,</span> 
+                        <span>soy Julián,</span>
+                        <span>desarrollador web</span>
+                    </p>
+                </section>
+
+                <section className={styles.presentation}>
                     <Image
-                        alt='yo'
+                        className={styles.me}
+                        alt='Julián España - Desarrollador Frontend'
                         src={dev}
-                        width={500}
-                        height={50}
                     />
                 </section>
 
-                <section className={styles.description}>
-                    {/* <h2>Hola, soy Julián, desarrollador frontend</h2> */}
-                </section>
 
                 <section className={styles.study}>
                     {/* <h2>Mis logros</h2> */}
