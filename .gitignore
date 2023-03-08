@@ -35,8 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# hidden files
-/src/assets/
 
 /src/styles/*.css.*
 /src/styles/*.css

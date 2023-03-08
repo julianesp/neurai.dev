@@ -11,10 +11,16 @@
 
     top: 0;
 
-    /* border: 1px solid #000; */
-    background-color: rgba(128, 130, 133, .9);
+    /* border-bottom: 1px solid #fff; */
+    background-color: rgba(0,0,0, .85);
+    background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    box-shadow: 0 0 10px #fff;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
     
-    
+    z-index: 1000;
 
 }
 
