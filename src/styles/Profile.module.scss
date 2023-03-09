@@ -1,4 +1,5 @@
-@import "./heredar.scss";
+@import '_heredar.scss';
+@import '_mixins.module.scss';
 
 .dev {
   /* @import flex-center; */
@@ -154,5 +155,10 @@
         opacity: 1;
       }
     }
+  }
+
+  .study {
+
+    @include subTitles;
   }
 }

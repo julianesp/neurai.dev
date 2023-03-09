@@ -32,9 +32,9 @@ const Profile = () => {
                     />
                 </section>
 
-
                 <section className={styles.study}>
-                    {/* <h2>Mis logros</h2> */}
+                    <h2>Formación</h2>
+                    <li className={styles.formacion}></li>
                 </section>
 
             </section>
