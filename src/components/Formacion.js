@@ -1,4 +1,5 @@
 const createStudy = () => {
+    const estudio = document.querySelector('[data-area-estudio]')
     
 }
 
