@@ -53,22 +53,22 @@ const Profile = () => {
 
                         <article className={styles['study--areas']}>
 
-                            <div className={styles.enlaceEstudio}>
-                                
-                                <p>Técnico en sistemas</p>
+                            <p>Técnico en sistemas</p>
 
-                                <Link href=''>Ver</Link>
-
-                            </div>
+                            <Link href=''>Ver</Link>
 
                             <Image
                                 alt='Técnico en sistemas'
                                 src={sena}
                             />
+                            
                         </article>
 
                         <article className={styles['study--areas']}>
                             <p>Tecnólogo Análisis de sistemas</p>
+
+                            <Link href=''>Ver</Link>
+
                             <Image
                                 alt='Tecnólogo Análisis de sistemas'
                                 src={sena}
@@ -77,19 +77,23 @@ const Profile = () => {
 
                         <article className={styles['study--areas']}>
                             <p>Desarrollador Frontend - Platzi</p>
-                            <Link href='Desarrollador Frontend - Platzi'>
-                            </Link>
+
+                            <Link href=''>Ver</Link>
+
                             <Image
-                                alt=''
-                                src={platzi}
+                                alt='Desarrollador Frontend - Platzi'
+                            src={platzi}
                             />
                         </article>
 
                         <article className={styles['study--areas']}>
                             <p>Ingeniería de Software</p>
+
+                            <Link href=''>Ver</Link>
+
                             <Image
                                 alt='Ingeniería de Software'
-                                src={ibero}
+                            src={ibero}
                             />
                         </article>
 
