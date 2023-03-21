@@ -53,7 +53,7 @@ const Profile = () => {
 
                         <article className={styles['study--areas']}>
 
-                            <p>Técnico en sistemas</p>
+                            <p>Técnico <br/> en sistemas</p>
 
                             <Link href=''>Ver</Link>
 
