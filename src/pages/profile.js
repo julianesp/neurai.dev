@@ -10,6 +10,7 @@ import ase from '../../public/logo.jpg'
 import sena from '../assets/img/education/sena.png'
 import platzi from '../assets/img/education/platzi.jpg'
 import ibero from '../assets/img/education/ibero.jpg'
+import tecSistemas from '../../public/estudios/tecSistemas.png'
 
 import styles from '../styles/Profile.module.scss'
 import Link from 'next/link'
@@ -56,6 +57,11 @@ const Profile = () => {
                             <p>Técnico <br/> en sistemas</p>
 
                             <Link href=''>Ver</Link>
+
+                            <Image
+                                alt='Certificado SENA'
+                                src={tecSistemas}
+                            />
 
                             <Image
                                 alt='Técnico en sistemas'
