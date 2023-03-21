@@ -65,7 +65,7 @@ const Profile = () => {
                         </article>
 
                         <article className={styles['study--areas']}>
-                            <p>Tecnólogo <br/> Análisis de sistemas</p>
+                            <p>Tecnólogo <br/> Análisis <br/> de sistemas</p>
 
                             <Link href=''>Ver</Link>
 
@@ -76,7 +76,7 @@ const Profile = () => {
                         </article>
 
                         <article className={styles['study--areas']}>
-                            <p>Desarrollador Frontend <br/> Platzi</p>
+                            <p>Desarrollador <br/> Frontend <br/> Platzi</p>
 
                             <Link href=''>Ver</Link>
 
@@ -87,7 +87,7 @@ const Profile = () => {
                         </article>
 
                         <article className={styles['study--areas']}>
-                            <p>Ingeniería de Software</p>
+                            <p>Ingeniería <br/> de Software</p>
 
                             <Link href=''>Ver</Link>
 
