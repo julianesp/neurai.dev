@@ -192,21 +192,25 @@
 
     h2 {
       padding-top: 15px;
-      padding-bottom: 15px;
+      padding-bottom: 25px;
 
       color: #fff;
+
+      text-decoration: underline;
     }
 
     .study__container {
       position: relative;
 
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      /* gap: 0 20px; */
+      gap: 0 20px;
 
       height: auto;
+      width: 200px;
+      min-width: 250px;
 
       .study--areas {
         position: relative;
@@ -217,20 +221,20 @@
         flex-direction: column;
         /* gap: 20px 0; */
 
-        width: 180px;
+        width: 150px;
         height: 200px;
         max-width: 320px;
 
         margin-bottom: 20px;
-        padding: 0 10px;
+        padding: 0 1px;
 
         background-color: #fff;
         border-radius: 20px;
-        border: 3px solid #baba;
+        border: 1px solid #baba;
         box-shadow: 5px 5px 10px #fff;        
 
         p {
-          font-size: 1.4rem;
+          font-size: 1.1rem;
           text-align: center;
           
           
@@ -252,7 +256,7 @@
           border-radius: 20px;
           color: #fff;
 
-          font-size: 1.3rem;
+          font-size: 1.1rem;
           font-weight: bolder;
         }
 

@@ -14,8 +14,12 @@ module.exports = {
 		// "pwa:recommended",
 	],
 	rules: {
-		// 'prettier/prettier': 0,
 		semi: ["error", "never"],
+		"css-semicolonexpected": 0,
+		"quote-props": ["error", "as-needed"],
+		"react/prop-types": 0,
+		"declaration-block-trailing-semicolon": 0
+		// 'prettier/prettier': 0,
 		// "react/no-unescaped-entities": "off",
 		// "@next/next/no-page-custom-font": "off",
 
