@@ -1,7 +1,9 @@
 import React from 'react'
-// import Link from 'next/link'
+import ImageButton from '../components/showImagen'
 import Image from 'next/image'
 import Head from 'next/head'
+
+import Layout from '../components/Layout'
 
 import dev from '../assets/img/developer_2.jpg'
 import cirp from '../assets/img/empresas/cirp.png'
@@ -10,18 +12,21 @@ import ase from '../../public/logo.jpg'
 import sena from '../assets/img/education/sena.png'
 import platzi from '../assets/img/education/platzi.jpg'
 import ibero from '../assets/img/education/ibero.jpg'
+import tecSistemas from '../../public/estudios/tecSistemas.png'
 
-import styles from '../styles/Profile.module.scss'
 import Link from 'next/link'
+import styles from '../styles/Profile.module.scss'
 
 const Profile = () => {
     return (
-        <>
+        <Layout>
             <Head>
                 <title>Mi perfil</title>
             </Head>
 
             <section className={styles.dev}>
+
+                
 
                 <section className={styles.description}>
                     <p>
@@ -37,14 +42,6 @@ const Profile = () => {
                     />
                 </section>
 
-                {/* <section className={styles.presentation}>
-                    <Image
-                        className={styles.me}
-                        alt='Julián España - Desarrollador Frontend'
-                        src={dev}
-                    />
-                </section> */}
-
                 <section className={styles.study}>
 
                     <h2>Formación</h2>
@@ -55,7 +52,8 @@ const Profile = () => {
 
                             <p>Técnico en sistemas</p>
 
-                            <Link href=''>Ver</Link>
+                            <Link href={tecSistemas}>Ver</Link>
+                            <ImageButton/>
 
                             <Image
                                 alt='Técnico en sistemas'
@@ -143,7 +141,7 @@ const Profile = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </Layout>
     )
 }
 
