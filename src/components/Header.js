@@ -1,17 +1,17 @@
 import React from 'react'
-import '@styles/Header.scss'
 import logo from '@img/cerebro.svg'
 import { NavLink } from "react-router-dom"
-// llamando a libreria
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" />
-//calling file js to menu
-import '../js/menu'
 import Image from 'next/image'
+// import styles from '../assets/fonts/style.css'
+import styles from '../styles/NavBar.module.scss'
 
 const Header = () => {
     return (
-        <div className='header'>
-            <div className="logo">
+        <div className={styles.container}>
+
+            <span className={styles['icon-menu']}></span>
+
+            <div className={styles.logo}>
                 <Image 
                     src={logo}
                     alt="Logo de mi tienda"
@@ -19,6 +19,7 @@ const Header = () => {
                 {/* <img src={logo} /> */}
                 <p>Neurai</p>
             </div>
+            
             <nav className='header__contenedor hamburger hamburger--elastic is-active" type="button'>
                 <div id="menu">
                     <ul>

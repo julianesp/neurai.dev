@@ -1,4 +1,4 @@
-
+import '../assets/fonts/style.css'
 import '../styles/Profile.module.scss'
 import '../styles/globals.scss'
 
