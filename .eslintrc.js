@@ -18,10 +18,18 @@ module.exports = {
 		"css-semicolonexpected": 0,
 		"quote-props": ["error", "as-needed"],
 		"react/prop-types": 0,
-		"declaration-block-trailing-semicolon": 0
+		"declaration-block-trailing-semicolon": 0,
 		// 'prettier/prettier': 0,
 		// "react/no-unescaped-entities": "off",
 		// "@next/next/no-page-custom-font": "off",
 
+		
 	},
+
+	// plugins: [
+	// 	"jsx-a11y/click-events-have-key-events",
+	// 	"jsx-a11y/no-static-element-interactions",
+		
+	// ]
+
 }

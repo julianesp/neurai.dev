@@ -4,8 +4,6 @@ import Link from 'next/link'
 import linkedin from '/public/network/linkedin.png'
 import github from '/public/network/github.png'
 import twitter from '/public/network/twitter.svg'
-import facebook from '/public/network/facebook.png'
-import whatsapp from '/public/network/whatsapp.svg'
 import styles from '../styles/Footer.module.scss'
 
 const Footer = () => {

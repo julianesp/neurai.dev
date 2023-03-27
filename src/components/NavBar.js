@@ -26,7 +26,7 @@ const NavBar = () => {
         />
       </div>
       
-      <span class="icon-menu" onClick={ handleClick }></span>
+      <button className="icon-menu" onClick={ handleClick }></button>
 
       <menu className={`${styles.menuNav} ${menuAbierto ? styles.open : ''}`}>
         <Link href='/'>Inicio</Link>

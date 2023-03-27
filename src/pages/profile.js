@@ -1,5 +1,4 @@
 import React from 'react'
-import ImageButton from '../components/showImagen'
 import Image from 'next/image'
 import Head from 'next/head'
 
@@ -53,7 +52,7 @@ const Profile = () => {
                             <p>Técnico <br/> en sistemas</p>
 
                             <Link href={tecSistemas}>Ver</Link>
-                            <ImageButton/>
+                            
 
                             <Image
                                 alt='Certificado SENA'

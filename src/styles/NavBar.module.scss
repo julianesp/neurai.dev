@@ -49,12 +49,13 @@
   border: 2px solid #fff;
   box-shadow: 5px 5px 10px #fff;
 
-  transition: 1s ease-in-out;
+  
 
+  
   animation-name: show;
-  animation-duration: 1s;
-  /* animation-direction: alternate; */
-  /* animation-fill-mode: both; */
+  animation-duration: .5s;
+  /* animation-direction: alternate;
+  animation-fill-mode: both; */
   
 }
 
@@ -84,7 +85,7 @@
 
   border-radius: 20px;
   
-  transition: .2s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 .menuNav a {
