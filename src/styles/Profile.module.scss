@@ -1,8 +1,4 @@
-/* @import 'heredar.scss';
-@import 'mixins.module.scss'; */
-
 .dev {
-  /* @import flex-center; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +141,6 @@
     }
   }
 
-
   .study {
     position: relative;
 
@@ -185,6 +180,7 @@
 
       height: auto;
 
+      /* Estilos para imagen diplomas */
       .study--areas {
         position: relative;
 
@@ -193,12 +189,8 @@
         justify-content: space-around;
         flex-direction: column;
 
-        /* gap: 20px 0; */
-
         width: 140px;
         height: 150px;
-        /* min-width: 120px; */
-        /* max-width: 320px; */
 
         margin-bottom: 20px;
         padding: 0 1px;
@@ -206,16 +198,22 @@
         background-color: #fff;
         border-radius: 10px;
         border: 1px solid #baba;
-        box-shadow: 5px 5px 1px #baba;        
+        box-shadow: 5px 5px 1px #baba;
 
         p {
           font-size: 1.1rem;
           text-align: center;
-          
-          
         }
 
-        a {
+        /* .image-button {
+          border: 2px solid #333;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          margin: 10px;
+          z-index: 100;
+          position: relative;
+        } */
+
+        .image-button {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -229,22 +227,33 @@
 
           background-color: rgb(25, 174, 226);
           border-radius: 20px;
+          border: none;
           color: #fff;
 
           font-size: 1.1rem;
           font-weight: bolder;
         }
 
+        .image-button--cerrar {
+          /* opacity: 0; */
+          
+        }
+
         img {
           position: absolute;
 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          top: -400px;
           bottom: 0;
-          right: 0;
+          left: 30px;
 
-          width: 35px;
-          height: 35px;
+          width: 250px;
+          height: 350px;
 
-          border-radius: 50%;
+          border-radius: 20px;
           z-index: 100;
         }
       }

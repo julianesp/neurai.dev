@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
 
@@ -8,24 +8,29 @@ import dev from '../assets/img/developer_2.jpg'
 import cirp from '../assets/img/empresas/cirp.png'
 import awaspa from '../assets/img/empresas/awaspa.png'
 import ase from '../../public/logo.jpg'
-import sena from '../assets/img/education/sena.png'
-import platzi from '../assets/img/education/platzi.jpg'
-import ibero from '../assets/img/education/ibero.jpg'
+// import sena from '../assets/img/education/sena.png'
+// import platzi from '../assets/img/education/platzi.jpg'
+// import ibero from '../assets/img/education/ibero.jpg'
 import tecSistemas from '../../public/estudios/tecSistemas.png'
 
 import Link from 'next/link'
 import styles from '../styles/Profile.module.scss'
 
 const Profile = () => {
+
+    const [showImage, setShowImage] = useState(false)
+
+  const handleButtonClick = () => {
+    setShowImage(!showImage)
+  }
+
     return (
         <Layout>
             <Head>
                 <title>Mi perfil</title>
             </Head>
 
-            <section className={styles.dev}>
-
-                
+            <section className={styles.dev}>               
 
                 <section className={styles.description}>
                     <p>
@@ -51,10 +56,24 @@ const Profile = () => {
 
                             <p>Técnico <br/> en sistemas</p>
 
-                            <Link href={tecSistemas}>Ver</Link>
-                            
+                                <button 
+                                    className={ styles['image-button'] } onClick={ handleButtonClick }>
+                                        Ver
+                                </button>
+                                { showImage && 
+                                    <Image  src={ tecSistemas } alt="Técnico" 
+                                    
+                                    /> 
+                                }
+                                <button
+                                    className={ styles['image-button--cerrar']}
+                                    onClick={ handleButtonClick }
 
-                            <Image
+                                >
+                                        Cerrar
+                                </button>
+
+                            {/* <Image
                                 alt='Certificado SENA'
                                 src={tecSistemas}
                             />
@@ -62,7 +81,7 @@ const Profile = () => {
                             <Image
                                 alt='Técnico en sistemas'
                                 src={sena}
-                            />
+                            /> */}
                             
                         </article>
 
@@ -71,10 +90,10 @@ const Profile = () => {
 
                             <Link href=''>Ver</Link>
 
-                            <Image
+                            {/* <Image
                                 alt='Tecnólogo Análisis de sistemas'
                                 src={sena}
-                            />
+                            /> */}
                         </article>
 
                         <article className={styles['study--areas']}>
@@ -82,10 +101,10 @@ const Profile = () => {
 
                             <Link href=''>Ver</Link>
 
-                            <Image
+                            {/* <Image
                                 alt='Desarrollador Frontend - Platzi'
                             src={platzi}
-                            />
+                            /> */}
                         </article>
 
                         <article className={styles['study--areas']}>
@@ -93,10 +112,10 @@ const Profile = () => {
 
                             <Link href=''>Ver</Link>
 
-                            <Image
+                            {/* <Image
                                 alt='Ingeniería de Software'
                             src={ibero}
-                            />
+                            /> */}
                         </article>
 
                     </section>
