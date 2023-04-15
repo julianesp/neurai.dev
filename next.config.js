@@ -1,10 +1,13 @@
-const nextConfig = {
-  output: 'standalone',
-  eslint: {
-    ignoreDuringBuilds: true,
+const path = require('path');
+
+module.exports = {
+
+
+  reactStrictMode: true,
+
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles/')],
   },
 
-
+  
 }
-
-module.exports = nextConfig
