@@ -1,0 +1,42 @@
+
+import React from 'react'
+
+const titulos = [
+    {
+        id: 0,
+        nombre: 'Técnico en sistemas',
+        imagen: '../assets/img/education/sena.png'
+    },
+    {
+        id: 1,
+        nombre: 'Tecnologo en análisis de sistemas',
+        imagen: '../assets/img/education/sena.png'
+        
+    },
+    {
+        id: 2,
+        nombre: 'Desarrollador Frontend',
+        imagen: '../assets/img/education/platzi.jpg'
+        
+    },
+    {
+        id: 0,
+        nombre: 'Ingeniería de software',
+        imagen: '../assets/img/education/ibero.jpg'
+        
+    },
+]
+
+const ItemsContainer = () => {
+
+    // const titulo = document.querySelector('#titulo')
+
+    return (
+        {
+            
+        }
+        
+    )
+}
+
+export default ItemsContainer

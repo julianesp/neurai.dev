@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
+import Link from 'next/link'
+
 import dev from '../assets/img/developer_2.jpg'
 import cirp from '../assets/img/empresas/cirp.png'
 import awaspa from '../assets/img/empresas/awaspa.png'
@@ -11,8 +13,8 @@ import ase from '../../public/logo.jpg'
 import tecSistemas from '../../public/estudios/tecSistemas.png'
 
 import ImageShow from '../components/ImageShow'
+// import { ItemsContainer } from '../components/ItemsContainer'
 
-import Link from 'next/link'
 import styles from '../styles/Profile.module.scss'
 
 
@@ -60,6 +62,45 @@ const Profile = () => {
 
                         <article className={styles['study--areas']}>
 
+                            <p id='titulo'>Técnico <br /> en sistemas</p>
+                            
+                            
+
+                            <button
+                                className={styles['image-button']} onClick={handleButtonClick}>
+                                Ver
+                            </button>
+
+                            {
+                                showImage &&
+                                (
+                                    <>
+                                        <div className="cerrar">
+                                            
+                                            <ImageShow
+                                                src={tecSistemas}
+                                                alt='tecnico'
+                                                onClose={handleCloseClick} />
+
+                                                <button
+                                                    className={styles['image-button--cerrar']}
+                                                    onClick={handleButtonClick}
+                                                >
+                                                    X
+                                                </button>
+
+                                        </div>
+
+                                    </>
+
+                                )
+
+                            }
+
+                        </article>
+
+                        <article className={styles['study--areas']}>
+
                             <p>Técnico <br /> en sistemas</p>
 
                             <button
@@ -93,52 +134,80 @@ const Profile = () => {
 
                             }
 
+                        </article>
 
+                        <article className={styles['study--areas']}>
 
+                            <p>Técnico <br /> en sistemas</p>
 
-                            {/* <Image
-                                alt='Certificado SENA'
-                                src={tecSistemas}
-                            />
+                            <button
+                                className={styles['image-button']} onClick={handleButtonClick}>
+                                Ver
+                            </button>
 
-                            <Image
-                                alt='Técnico en sistemas'
-                                src={sena}
-                            /> */}
+                            {
+                                showImage &&
+                                (
+                                    <>
+                                        <div className="cerrar">
+                                            
+                                            <ImageShow
+                                                src={tecSistemas}
+                                                alt='tecnico'
+                                                onClose={handleCloseClick} />
+
+                                                <button
+                                                    className={styles['image-button--cerrar']}
+                                                    onClick={handleButtonClick}
+                                                >
+                                                    X
+                                                </button>
+
+                                        </div>
+
+                                    </>
+
+                                )
+
+                            }
 
                         </article>
 
                         <article className={styles['study--areas']}>
-                            <p>Tecnólogo <br /> Análisis <br /> de sistemas</p>
 
-                            <Link href=''>Ver</Link>
+                            <p>Técnico <br /> en sistemas</p>
 
-                            {/* <Image
-                                alt='Tecnólogo Análisis de sistemas'
-                                src={sena}
-                            /> */}
-                        </article>
+                            <button
+                                className={styles['image-button']} onClick={handleButtonClick}>
+                                Ver
+                            </button>
 
-                        <article className={styles['study--areas']}>
-                            <p>Desarrollador <br /> Frontend <br /> Platzi</p>
+                            {
+                                showImage &&
+                                (
+                                    <>
+                                        <div className="cerrar">
+                                            
+                                            <ImageShow
+                                                src={tecSistemas}
+                                                alt='tecnico'
+                                                onClose={handleCloseClick} />
 
-                            <Link href=''>Ver</Link>
+                                                <button
+                                                    className={styles['image-button--cerrar']}
+                                                    onClick={handleButtonClick}
+                                                >
+                                                    X
+                                                </button>
 
-                            {/* <Image
-                                alt='Desarrollador Frontend - Platzi'
-                            src={platzi}
-                            /> */}
-                        </article>
+                                        </div>
 
-                        <article className={styles['study--areas']}>
-                            <p>Ingeniería <br /> de Software</p>
+                                    </>
 
-                            <Link href=''>Ver</Link>
+                                )
 
-                            {/* <Image
-                                alt='Ingeniería de Software'
-                            src={ibero}
-                            /> */}
+                            }
+
                         </article>
 
                     </section>
