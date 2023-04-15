@@ -35,7 +35,3 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-
-/src/styles/*.css.*
-/src/styles/*.css
-/src/styles/*.module.*

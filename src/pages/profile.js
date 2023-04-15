@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
-
-import Layout from '../components/Layout'
-
 import dev from '../assets/img/developer_2.jpg'
 import cirp from '../assets/img/empresas/cirp.png'
 import awaspa from '../assets/img/empresas/awaspa.png'
@@ -13,24 +10,33 @@ import ase from '../../public/logo.jpg'
 // import ibero from '../assets/img/education/ibero.jpg'
 import tecSistemas from '../../public/estudios/tecSistemas.png'
 
+import ImageShow from '../components/ImageShow'
+
 import Link from 'next/link'
 import styles from '../styles/Profile.module.scss'
+
 
 const Profile = () => {
 
     const [showImage, setShowImage] = useState(false)
 
-  const handleButtonClick = () => {
-    setShowImage(!showImage)
-  }
+    const handleButtonClick = () => {
+        setShowImage(!showImage)
+        // setShowImage(true)
+    }
+
+    const handleCloseClick = () => {
+        setShowImage(false)
+    }
 
     return (
-        <Layout>
+
+        <>
             <Head>
                 <title>Mi perfil</title>
             </Head>
 
-            <section className={styles.dev}>               
+            <section className={styles.dev}>
 
                 <section className={styles.description}>
                     <p>
@@ -54,24 +60,41 @@ const Profile = () => {
 
                         <article className={styles['study--areas']}>
 
-                            <p>Técnico <br/> en sistemas</p>
+                            <p>Técnico <br /> en sistemas</p>
 
-                                <button 
-                                    className={ styles['image-button'] } onClick={ handleButtonClick }>
-                                        Ver
-                                </button>
-                                { showImage && 
-                                    <Image  src={ tecSistemas } alt="Técnico" 
-                                    
-                                    /> 
-                                }
-                                <button
-                                    className={ styles['image-button--cerrar']}
-                                    onClick={ handleButtonClick }
+                            <button
+                                className={styles['image-button']} onClick={handleButtonClick}>
+                                Ver
+                            </button>
 
-                                >
-                                        Cerrar
-                                </button>
+                            {
+                                showImage &&
+                                (
+                                    <>
+                                        <div className="cerrar">
+                                            
+                                            <ImageShow
+                                                src={tecSistemas}
+                                                alt='tecnico'
+                                                onClose={handleCloseClick} />
+
+                                                <button
+                                                    className={styles['image-button--cerrar']}
+                                                    onClick={handleButtonClick}
+                                                >
+                                                    X
+                                                </button>
+
+                                        </div>
+
+                                    </>
+
+                                )
+
+                            }
+
+
+
 
                             {/* <Image
                                 alt='Certificado SENA'
@@ -82,11 +105,11 @@ const Profile = () => {
                                 alt='Técnico en sistemas'
                                 src={sena}
                             /> */}
-                            
+
                         </article>
 
                         <article className={styles['study--areas']}>
-                            <p>Tecnólogo <br/> Análisis <br/> de sistemas</p>
+                            <p>Tecnólogo <br /> Análisis <br /> de sistemas</p>
 
                             <Link href=''>Ver</Link>
 
@@ -97,7 +120,7 @@ const Profile = () => {
                         </article>
 
                         <article className={styles['study--areas']}>
-                            <p>Desarrollador <br/> Frontend <br/> Platzi</p>
+                            <p>Desarrollador <br /> Frontend <br /> Platzi</p>
 
                             <Link href=''>Ver</Link>
 
@@ -108,7 +131,7 @@ const Profile = () => {
                         </article>
 
                         <article className={styles['study--areas']}>
-                            <p>Ingeniería <br/> de Software</p>
+                            <p>Ingeniería <br /> de Software</p>
 
                             <Link href=''>Ver</Link>
 
@@ -164,7 +187,9 @@ const Profile = () => {
                     </div>
                 </div>
             </section>
-        </Layout>
+
+        </>
+
     )
 }
 
