@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/Layout"
-// import Accesorios from "../containers/Accesorios"
 import Profile from './profile'
+// import App from '../app.js'
 
 const Index = () => {
   return (
     <Layout>
       <Profile/>
-      {/* <Accesorios/> */}
+      {/* <App/> */}
     </Layout>
   )
 }
