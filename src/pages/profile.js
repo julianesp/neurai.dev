@@ -3,39 +3,44 @@ import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
 
+// import Estudios from '../components/Estudios'
+
 import dev from '../assets/img/developer_2.jpg'
 import cirp from '../assets/img/empresas/cirp.png'
 import awaspa from '../assets/img/empresas/awaspa.png'
-import ase from '../../public/logo.jpg'
+import ase from '../assets/img/empresas/ase.jpg'
 // import sena from '../assets/img/education/sena.png'
 // import platzi from '../assets/img/education/platzi.jpg'
 // import ibero from '../assets/img/education/ibero.jpg'
-import tecSistemas from '../../public/estudios/tecSistemas.png'
-
-import ImageShow from '../components/ImageShow'
-// import { ItemsContainer } from '../components/ItemsContainer'
+import tecni from '../assets/img/education/tecnicosistemas.jpg'
+import tecno from '../assets/img/education/tecnologia.png'
 
 import styles from '../styles/Profile.module.scss'
-
 
 const Profile = () => {
 
     const [showImage, setShowImage] = useState(false)
+    const [showImage1, setShowImage1] = useState(false);
 
-    const handleButtonClick = () => {
-        setShowImage(!showImage)
-        // setShowImage(true)
+    const toggleImage1 = () => {
+        setShowImage1(!showImage1);
+    }
+    const toggleImage = () => {
+        setShowImage(!showImage);
     }
 
-    const handleCloseClick = () => {
-        setShowImage(false)
+    const closeImage = () => {
+        setShowImage(false);
+    }
+    const closeImage2 = () => {
+        setShowImage1(false);
     }
 
     return (
 
         <>
             <Head>
-                <title>Mi perfil</title>
+                <title>Sobre mí</title>
             </Head>
 
             <section className={styles.dev}>
@@ -63,150 +68,39 @@ const Profile = () => {
                         <article className={styles['study--areas']}>
 
                             <p id='titulo'>Técnico <br /> en sistemas</p>
-                            
-                            
 
                             <button
-                                className={styles['image-button']} onClick={handleButtonClick}>
-                                Ver
-                            </button>
+                                className={styles['image-button']}
+                                onClick={toggleImage}>Ver</button>
 
-                            {
-                                showImage &&
-                                (
-                                    <>
-                                        <div className="cerrar">
-                                            
-                                            <ImageShow
-                                                src={tecSistemas}
-                                                alt='tecnico'
-                                                onClose={handleCloseClick} />
+                            {/* {showImage1 && <Image src={tecni} alt="Imagen 1" />} */}
 
-                                                <button
-                                                    className={styles['image-button--cerrar']}
-                                                    onClick={handleButtonClick}
-                                                >
-                                                    X
-                                                </button>
+                            {showImage && (
+                                <div className="image-modal">
+                                    <Image src={tecni} alt="Imagen" />
+                                    <button className={styles['image-button--cerrar']} onClick={closeImage}>X</button>
+                                </div>
+                            )}
 
-                                        </div>
-
-                                    </>
-
-                                )
-
-                            }
 
                         </article>
 
                         <article className={styles['study--areas']}>
 
-                            <p>Técnico <br /> en sistemas</p>
+                            <p id='titulo'>Tecnólogo en <br/> análisis de la información</p>
 
                             <button
-                                className={styles['image-button']} onClick={handleButtonClick}>
-                                Ver
-                            </button>
+                                className={styles['image-button']}
+                                onClick={toggleImage1}>Ver</button>
 
-                            {
-                                showImage &&
-                                (
-                                    <>
-                                        <div className="cerrar">
-                                            
-                                            <ImageShow
-                                                src={tecSistemas}
-                                                alt='tecnico'
-                                                onClose={handleCloseClick} />
+                            {/* {showImage2 && <Image src={tecno} alt="Imagen 1" />} */}
 
-                                                <button
-                                                    className={styles['image-button--cerrar']}
-                                                    onClick={handleButtonClick}
-                                                >
-                                                    X
-                                                </button>
-
-                                        </div>
-
-                                    </>
-
-                                )
-
-                            }
-
-                        </article>
-
-                        <article className={styles['study--areas']}>
-
-                            <p>Técnico <br /> en sistemas</p>
-
-                            <button
-                                className={styles['image-button']} onClick={handleButtonClick}>
-                                Ver
-                            </button>
-
-                            {
-                                showImage &&
-                                (
-                                    <>
-                                        <div className="cerrar">
-                                            
-                                            <ImageShow
-                                                src={tecSistemas}
-                                                alt='tecnico'
-                                                onClose={handleCloseClick} />
-
-                                                <button
-                                                    className={styles['image-button--cerrar']}
-                                                    onClick={handleButtonClick}
-                                                >
-                                                    X
-                                                </button>
-
-                                        </div>
-
-                                    </>
-
-                                )
-
-                            }
-
-                        </article>
-
-                        <article className={styles['study--areas']}>
-
-                            <p>Técnico <br /> en sistemas</p>
-
-                            <button
-                                className={styles['image-button']} onClick={handleButtonClick}>
-                                Ver
-                            </button>
-
-                            {
-                                showImage &&
-                                (
-                                    <>
-                                        <div className="cerrar">
-                                            
-                                            <ImageShow
-                                                src={tecSistemas}
-                                                alt='tecnico'
-                                                onClose={handleCloseClick} />
-
-                                                <button
-                                                    className={styles['image-button--cerrar']}
-                                                    onClick={handleButtonClick}
-                                                >
-                                                    X
-                                                </button>
-
-                                        </div>
-
-                                    </>
-
-                                )
-
-                            }
+                            {showImage1 && (
+                                <div className="image-modal">
+                                    <Image src={tecno} alt="Imagen" />
+                                    <button className={styles['image-button--cerrar']} onClick={closeImage2}>X</button>
+                                </div>
+                            )}
 
                         </article>
 
