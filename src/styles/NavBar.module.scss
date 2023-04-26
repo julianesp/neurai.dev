@@ -19,10 +19,7 @@
 
   z-index: 1000;
 
-  /* .logo .logo-img {
-    height: inherit;
-    align-items: center;
-  } */
+  
 }
 
 #icon {
@@ -42,21 +39,20 @@
   /* justify-content: center;
   align-items: center; */
 
-  width: 80%;
+  width: 60%;
 
-  /* background-color: rgba(23, 44, 52, .9); */
-  background-color: rgba(123, 166, 183, .9);
+  background-color: rgba(23, 44, 52, .9);
+  /* background-color: rgba(123, 166, 183, .9); */
   border: 2px solid #fff;
-  box-shadow: 5px 5px 10px #fff;
-
   
+  transition: ease-in 2s;
 
-  
   animation-name: show;
   animation-duration: .5s;
-  /* animation-direction: alternate;
-  animation-fill-mode: both; */
-  
+  animation-direction: alternate;
+  animation-fill-mode: both;
+
+
 }
 
 @keyframes show {
@@ -70,22 +66,22 @@
 }
 
 .menuNav.open {
-  /* position: absolute; */
+  position: absolute;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
-  width: 90vw;
-  height: 80vh;
+  width: 60vw;
+  height: 60vh;
 
   top: 80px;
-  left: 22px;
+  right: 30px;
 
   border-radius: 20px;
   
-  transition: all 0.3s ease;
+  transition: 1s ease-in all;
 }
 
 .menuNav a {
@@ -95,4 +91,6 @@
 
   color: #fff;
   font-size: 1.5rem;
+
+  
 }

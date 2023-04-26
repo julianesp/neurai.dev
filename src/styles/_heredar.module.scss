@@ -19,6 +19,14 @@
   justify-content: center;
   align-items: center;
 }
+
+.flex__center--column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .flex-left {
   display: flex;
   justify-content: left;
