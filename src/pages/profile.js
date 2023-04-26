@@ -20,20 +20,20 @@ import styles from '../styles/Profile.module.scss'
 const Profile = () => {
 
     const [showImage, setShowImage] = useState(false)
-    const [showImage1, setShowImage1] = useState(false);
+    const [showImage1, setShowImage1] = useState(false)
 
     const toggleImage1 = () => {
-        setShowImage1(!showImage1);
+        setShowImage1(!showImage1)
     }
     const toggleImage = () => {
-        setShowImage(!showImage);
+        setShowImage(!showImage)
     }
 
     const closeImage = () => {
-        setShowImage(false);
+        setShowImage(false)
     }
     const closeImage2 = () => {
-        setShowImage1(false);
+        setShowImage1(false)
     }
 
     return (
