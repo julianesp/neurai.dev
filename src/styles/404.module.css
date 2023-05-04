@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  height: 100vh;
+}
+
+.container h1 {
+  color: #fff;
+}
+
+.container .notFound {
+  width: 90px;
+  height: 90px;
+}/*# sourceMappingURL=404.module.css.map */
