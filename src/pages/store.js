@@ -1,53 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Layout from '../components/Layout'
 // import Productos from '../databases/data.json'
-import styles from '../styles/Store.module.scss'
-import Image from 'next/image'
+// import styles from '../styles/Store.module.scss'
+// import Image from 'next/image'
+import data from '../utils/data'
+import ProductItems from '../containers/ProductItems'
 
-const store = ({ entradas }) => {
-
-  const productos = require('../databases/data.json')
-
-  const [useProductos, useSetProductos] = useState([])
-
-  const showAcce = async () => {
-    const url = productos
-    const respuesta = await fetch(url)
-    const resultado = await respuesta.json
-
-    console.log(resultado)
-  }
-
-  showAcce()
-  // useEffect(() => {
-  // }, [])
-
-  console.log(entradas)
-
+export default function Store() {
   return (
     <Layout>
-      <section className={styles.container}>
-        <h1>tienda</h1>
+      <h1>tienda</h1>
+      <section className='grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 my-32 mx-32'>
 
-
-
+        {
+          data.products.map((product) => (
+            <ProductItems product={product} key={product.slug}></ProductItems>
+          ))
+        }
       </section>
     </Layout>
   )
 }
-
-// export async function getServerSideProps() {
-//   const url = productos
-//   const respuesta = await fetch(url)
-//   const entradas = await respuesta.json
-
-
-
-//   return {
-//     props: {
-//       entradas
-//     }
-//   }
-// }
-
-export default store

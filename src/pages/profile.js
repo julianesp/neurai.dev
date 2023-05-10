@@ -9,9 +9,6 @@ import dev from '../assets/img/developer_2.jpg'
 import cirp from '../assets/img/empresas/cirp.png'
 import awaspa from '../assets/img/empresas/awaspa.png'
 import ase from '../assets/img/empresas/ase.jpg'
-// import sena from '../assets/img/education/sena.png'
-// import platzi from '../assets/img/education/platzi.jpg'
-// import ibero from '../assets/img/education/ibero.jpg'
 import tecni from '../assets/img/education/tecnicosistemas.jpg'
 import tecno from '../assets/img/education/tecnologia.png'
 
@@ -87,7 +84,7 @@ const Profile = () => {
 
                         <article className={styles['study--areas']}>
 
-                            <p id='titulo'>Tecnólogo en <br/> análisis de la información</p>
+                            <p id='titulo'>Tecnólogo en <br /> análisis de la información</p>
 
                             <button
                                 className={styles['image-button']}
