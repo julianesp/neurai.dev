@@ -16,7 +16,6 @@ const blog = () => {
                 <header>
                     <nav>
                         <ul>
-                            {/* <li> */}
                             <Link href="#para" className={styles.enlace}>
                                 Paradigmas
                             </Link>
