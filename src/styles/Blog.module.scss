@@ -1,0 +1,99 @@
+@import './_heredar.module.scss';
+
+.container {
+  /* @extend .flex__center--column; */
+  /* width: 800px; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.container .temas button h2 {
+  width: 200px;
+
+  color: #fff;
+  text-decoration: underline;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.container .temas .paradigmas {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #fff;
+
+  margin-bottom: 70px;
+  padding: 10px 50px;
+}
+
+.container .temas .paradigmas li p {
+  padding: 10px 0;
+}
+
+.container .temas p {
+  color: #fff;
+}
+
+.container .temas h3 {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.container .temas ul li {
+  color: #fff;
+}
+
+.container .temas .lenguajes li {
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+}
+
+.container p {
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.container p span {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.container header {
+  margin-top: 80px;
+}
+
+.container header nav ul {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 10px 0;
+
+  gap: 20px 0;
+}
+
+.container header nav ul li {
+  /* list-style: none; */
+
+  border: 1px solid #fff;
+  padding: 20px;
+  border-radius: 20px;
+  color: #000;
+  background-color: #fff;
+}
+
+.container header nav ul:focus {
+  margin-bottom: 50px;
+}
+
+.container .enlace {
+  border: 2px solid #fff;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #fff;
+}

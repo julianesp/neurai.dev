@@ -1,7 +1,0 @@
-@import './_heredar.module.scss';
-
-.container {
-    @extend .flex__center--column;
-
-    height: 100vh;
-}
