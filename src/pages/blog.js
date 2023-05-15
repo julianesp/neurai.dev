@@ -16,6 +16,10 @@ const blog = () => {
                 <header>
                     <nav>
                         <ul>
+                            <Link href="#intro" className={styles.enlace}>
+                                Inicio
+                            </Link>
+
                             <Link href="#para" className={styles.enlace}>
                                 Paradigmas
                             </Link>
@@ -27,6 +31,18 @@ const blog = () => {
                         </ul>
                     </nav>
                 </header>
+
+                <h1>La calidad, ¿de qué sirve en la industria del software?</h1>
+
+                <article class={styles.temas}>
+                    <p id="intro">
+                        Además de permitirnos innovar cada vez más rápido a través de la robótica, por ejemplo, el desarrollo de software ha sido una forma para que cualquier persona pueda trabajar siempre y cuando sea disciplinada y se mantenga en constante actualización.
+                    </p>
+                    <br />
+                    <p id="intro">
+                        Para todo trabajo o bien sea que tomes el desarrollo de software como tu hobbie <span><i>(por gusto)</i></span>, este debe ser creado con un fin específico y aplicando estructuras para que el sistema sea robusto y así, evitar futuros fallos, aunque no se debe menospreciar que habrán errores, porque los habrán, hasta las compañías más avanzadas en este campo han tenido fallos, sin embargo, esto hace que el equipo crezca al estar comprometidos en encontrar y sanar ese fallo o punto y coma (;) que nos causa tanto estrés 😅
+                    </p>
+                </article>
 
                 <article class={styles.temas}>
                     <button id="para">
@@ -117,6 +133,16 @@ const blog = () => {
                 </article>
 
             </section>
+
+            <footer className={styles.conclusion}>
+                <h1>Conclusión</h1>
+                <p>
+                    Como futuro ingeniero de software, debo estar enterado de todo lo relacionado con la estructuración de los sistemas que serán usados por las personas y tratar de que sean de fácil uso para ellos, es por esta razón que no debo construir sistemas complejos que solamente los entienda otro ingeniero de software. Los sistemas deben estar pensados para que hasta un niño que aún no puede leer, entienda para qué sirve el sitio web.
+                </p>
+                <p>
+                    Julián España Riobamba
+                </p>
+            </footer>
         </Layout>
 
     )
