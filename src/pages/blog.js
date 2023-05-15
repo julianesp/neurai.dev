@@ -61,12 +61,12 @@ const blog = () => {
 
                     <ul class={styles.paradigmas}>
                         <li>
-                            <p>
-                                Programación estructurada: este paradigma se centra en
-                                descomponer o modularizar
-                                <span>(dividir el problema en pequeñas partes),</span>
-                                para facilitar el mantenimiento y reutilización del código
-                            </p>
+
+                            Programación estructurada: este paradigma se centra en
+                            descomponer o modularizar
+                            <span>(dividir el problema en pequeñas partes),</span>
+                            para facilitar el mantenimiento y reutilización del código
+
                         </li>
                         <li>
                             <p>
@@ -110,8 +110,8 @@ const blog = () => {
                         órdenes a dispositivos físicos o hardware, más conocidos como robots
                         que en la actualidad están haciendo más presencia gracias al uso de la
                         Inteligencia Artificial, <a href="https://www.youtube.com/watch?v=Hsv6cmDdt5g" target="_blank"
-                            title="Abrir enlace de Youtube">Sophía</a>
-                        es un ejemplo de esto.
+                            title="Abrir enlace de Youtube">
+                            <span>Sophía</span></a> es un ejemplo de esto.
                     </p>
 
 
