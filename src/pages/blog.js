@@ -3,6 +3,8 @@ import Layout from '../components/Layout'
 import styles from '../styles/Blog.module.scss'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
+import ibero from '../assets/img/logos/ibero.png'
 
 const blog = () => {
     return (
@@ -28,23 +30,31 @@ const blog = () => {
                                 Lenguajes
                             </Link>
 
+                            <Image
+                                alt='Logo Universidad'
+                                src={ibero}
+                                className={styles.enlace__img}
+                            // width={20}
+                            // height={20}
+                            />
+
                         </ul>
                     </nav>
                 </header>
 
                 <h1>La calidad, ¿de qué sirve en la industria del software?</h1>
 
-                <article class={styles.temas}>
+                <article className={styles.temas}>
                     <p id="intro">
                         Además de permitirnos innovar cada vez más rápido a través de la robótica, por ejemplo, el desarrollo de software ha sido una forma para que cualquier persona pueda trabajar siempre y cuando sea disciplinada y se mantenga en constante actualización.
                     </p>
                     <br />
                     <p id="intro">
-                        Para todo trabajo o bien sea que tomes el desarrollo de software como tu hobbie <span><i>(por gusto)</i></span>, este debe ser creado con un fin específico y aplicando estructuras para que el sistema sea robusto y así, evitar futuros fallos, aunque no se debe menospreciar que habrán errores, porque los habrán, hasta las compañías más avanzadas en este campo han tenido fallos, sin embargo, esto hace que el equipo crezca al estar comprometidos en encontrar y sanar ese fallo o punto y coma (;) que nos causa tanto estrés 😅
+                        Para todo trabajo o bien sea que tomes el desarrollo de software como tu hobbie <span><i>(por gusto)</i></span>, este debe ser creado con un fin específico y aplicando estructuras para que el sistema sea robusto y así, evitar futuros fallos, aunque no se debe menospreciar que habrán errores, porque los habrán, hasta las compañías más avanzadas en este campo han tenido fallos, sin embargo, esto hace que el equipo crezca al estar comprometidos en encontrar y solucionar ese fallo o punto y coma (;) que nos causa tanto estrés 😅
                     </p>
                 </article>
 
-                <article class={styles.temas}>
+                <article className={styles.temas}>
                     <button id="para">
                         <h2>¿Qué es paradigma?</h2>
                     </button>
@@ -59,7 +69,7 @@ const blog = () => {
                         <br /><br />
                     </p>
 
-                    <ul class={styles.paradigmas}>
+                    <ul className={styles.paradigmas}>
                         <li>
 
                             Programación estructurada: este paradigma se centra en
@@ -95,7 +105,7 @@ const blog = () => {
 
                 </article>
 
-                <article class={styles.temas}>
+                <article className={styles.temas}>
                     <h2>
                         <button id="lan">
                             <h2>¿Qué es lenguaje de programación?</h2>
@@ -116,7 +126,7 @@ const blog = () => {
 
 
                     <h3>Lenguajes utilizados en los paradigmas</h3>
-                    <ul class={styles.lenguajes}>
+                    <ul className={styles.lenguajes}>
                         <li>
                             Programación estructurada: C, Pascal, Algol, Fortran, BASIC
                         </li>

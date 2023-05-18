@@ -25,8 +25,8 @@ const NavBar = () => {
           height={50}
         />
       </div>
-      
-      <button className="icon-menu" onClick={ handleClick }></button>
+
+      <button className="icon-menu" onClick={handleClick}></button>
 
       <menu className={`${styles.menuNav} ${menuAbierto ? styles.open : ''}`}>
         <Link href='/'>Inicio</Link>
