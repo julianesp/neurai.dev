@@ -226,7 +226,6 @@
           font-weight: bolder;
         }
 
-
         img {
           position: fixed;
 
@@ -248,12 +247,12 @@
         }
 
         .image-button--cerrar {
-          position: fixed;          
+          position: fixed;
           z-index: 402;
 
           width: 40px;
           height: 40px;
-          
+
           top: 100px;
           right: 20px;
 
@@ -267,7 +266,6 @@
           font-weight: bolder;
         }
       }
-      
     }
   }
 }
@@ -287,8 +285,10 @@
 
   h3 {
     padding-bottom: 20px;
-    color: #fff;
     text-decoration: underline;
+    font-size: 1.5rem;
+
+    color: #fff;
   }
 
   .portfolio__empresas {
@@ -302,11 +302,38 @@
       margin-right: 20px;
 
       img {
-        padding: 10px;
+        width: 100px;
+        height: 100px;
+
+        padding: 5px;
 
         border: 1px solid #fff;
         border-radius: 50%;
         box-shadow: 0 0 10px #bababa;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .dev {
+    & .description {
+      display: grid;
+      grid-template-columns: 50% 50%;
+
+      justify-items: center;
+
+      height: 400px;
+
+      & p {
+        & span {
+          font-size: 2.5rem;
+        }
+      }
+
+      & .me {
+        width: 300px;
+        height: 300px;
       }
     }
   }
