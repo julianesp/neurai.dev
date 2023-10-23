@@ -1,3 +1,5 @@
+@import './mixins.scss';
+
 .dev {
   display: flex;
   justify-content: center;
@@ -140,134 +142,6 @@
       }
     }
   }
-
-  .study {
-    position: relative;
-
-    /* @include subTitles; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    margin-top: 50px;
-    margin-bottom: 30px;
-    padding: 15px 0;
-
-    width: 100%;
-    height: auto;
-
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 20px 20px;
-
-    h2 {
-      padding-top: 15px;
-      padding-bottom: 25px;
-
-      color: #fff;
-
-      text-decoration: underline;
-    }
-
-    .study__container {
-      position: relative;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0 20px;
-
-      height: auto;
-
-      /* Estilos para imagen diplomas */
-      .study--areas {
-        position: relative;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-
-        width: 140px;
-        height: 150px;
-
-        margin-bottom: 20px;
-        padding: 0 1px;
-
-        background-color: #fff;
-        border-radius: 10px;
-        border: 1px solid #baba;
-        box-shadow: 5px 5px 1px #baba;
-
-        p {
-          font-size: 1rem;
-          text-align: center;
-        }
-
-        .image-button {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          bottom: 0;
-
-          width: 100px;
-          height: 40px;
-
-          text-decoration: none;
-
-          background-color: rgb(25, 174, 226);
-          border-radius: 20px;
-          border: none;
-          color: #fff;
-
-          font-size: 1.1rem;
-          font-weight: bolder;
-        }
-
-        img {
-          position: fixed;
-
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          top: 115px;
-          bottom: 0;
-          left: 35px;
-
-          width: calc(100% - 70px);
-          height: calc(100% - 170px);
-
-          border-radius: 20px;
-          object-fit: fill;
-
-          z-index: 100;
-        }
-
-        .image-button--cerrar {
-          position: fixed;
-          z-index: 402;
-
-          width: 40px;
-          height: 40px;
-
-          top: 100px;
-          right: 20px;
-
-          background-color: rgb(25, 174, 226);
-          border-radius: 50%;
-          border-color: transparent;
-
-          color: #fff;
-
-          font-size: medium;
-          font-weight: bolder;
-        }
-      }
-    }
-  }
 }
 .portfolio {
   display: flex;
@@ -334,6 +208,193 @@
       & .me {
         width: 300px;
         height: 300px;
+      }
+    }
+  }
+
+  .page {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: max-content;
+    padding: 0 80px;
+
+    grid-template-areas:
+      'estudios publicidad'
+      'portafolio publicidad';
+
+    & .study {
+      grid-area: estudios;
+      position: relative;
+
+      /* @include subTitles; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      margin-top: 50px;
+      margin-bottom: 30px;
+      padding: 15px 0;
+
+      width: 100%;
+      height: 250px;
+
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 20px 20px;
+
+      h2 {
+        padding-top: 15px;
+        padding-bottom: 25px;
+
+        color: #fff;
+
+        text-decoration: underline;
+      }
+
+      .study__container {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0 20px;
+
+        height: auto;
+
+        /* Estilos para imagen diplomas */
+        .study--areas {
+          position: relative;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-direction: column;
+
+          width: 140px;
+          height: 150px;
+
+          margin-bottom: 20px;
+          padding: 0 1px;
+
+          background-color: #fff;
+          border-radius: 10px;
+          border: 1px solid #baba;
+          box-shadow: 5px 5px 1px #baba;
+
+          p {
+            font-size: 1rem;
+            text-align: center;
+          }
+
+          .image-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            bottom: 0;
+
+            width: 100px;
+            height: 40px;
+
+            text-decoration: none;
+
+            background-color: rgb(25, 174, 226);
+            border-radius: 20px;
+            border: none;
+            color: #fff;
+
+            font-size: 1.1rem;
+            font-weight: bolder;
+          }
+
+          img {
+            position: fixed;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            top: 115px;
+            bottom: 0;
+            left: 35px;
+
+            width: calc(100% - 70px);
+            height: calc(100% - 170px);
+
+            border-radius: 20px;
+            object-fit: fill;
+
+            z-index: 100;
+          }
+
+          .image-button--cerrar {
+            position: fixed;
+            z-index: 402;
+
+            width: 40px;
+            height: 40px;
+
+            top: 100px;
+            right: 20px;
+
+            background-color: rgb(25, 174, 226);
+            border-radius: 50%;
+            border-color: transparent;
+
+            color: #fff;
+
+            font-size: medium;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+
+    /* & .portfolio {
+      grid-area: portafolio;
+    } */
+
+    & .publicidad {
+      grid-area: publicidad;
+
+      height: 500px;
+      overflow-y: scroll;
+
+      margin-top: 50px;
+      margin-left: 40px;
+      margin-bottom: 50px;
+      padding: 20px;
+
+      border: 1px solid #fff;
+      border-radius: 20px;
+
+      & .negocio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 10px;
+        margin-bottom: 20px;
+
+        width: 100%;
+        height: 200px;
+
+        border: 1px solid #fff;
+        border-radius: 20px;
+
+        & h3 {
+          color: #fff;
+          font-size: 1.3rem;
+        }
+
+        & img {
+        }
+
+        & button {
+          @include estilo_boton(#fff, #000);
+        }
       }
     }
   }

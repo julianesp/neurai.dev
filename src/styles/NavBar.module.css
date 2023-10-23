@@ -26,11 +26,8 @@
 .menuNav {
   position: absolute;
   display: none;
-  /* justify-content: center;
-  align-items: center; */
   width: 60%;
   background-color: rgba(23, 44, 52, 0.9);
-  /* background-color: rgba(123, 166, 183, .9); */
   border: 2px solid #fff;
   transition: ease-in 2s;
   animation-name: show;
@@ -65,4 +62,35 @@
   padding-bottom: 25px;
   color: #fff;
   font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 80px;
+  }
+  .menuNav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 40px;
+    right: 80px;
+    animation: none;
+    background-color: unset;
+    border: unset;
+    width: auto;
+  }
+  .menuNav a {
+    width: 100px;
+    padding-bottom: unset;
+    transition: 0.35s ease-in;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .menuNav a:hover {
+    /* transform: scale(0.9); */
+    /* text-decoration: underline; */
+    /* padding: 5px; */
+    color: #000;
+    background-color: #fff;
+  }
 }/*# sourceMappingURL=NavBar.module.css.map */

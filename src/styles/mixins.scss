@@ -1,0 +1,16 @@
+@mixin estilo_boton($background, $color) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  height: 50px;
+
+  text-decoration: none;
+
+  border: 1px solid #bababa;
+  background-color: $background;
+  border-radius: 10px;
+
+  color: $color;
+}

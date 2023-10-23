@@ -1,0 +1,257 @@
+.borde-right {
+  border: 1px double rgba(187, 170, 187, 0.6666666667);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(187, 170, 187, 0.6666666667);
+}
+
+.borde-left {
+  border: 1px double rgba(187, 170, 187, 0.6666666667);
+  border-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(187, 170, 187, 0.6666666667);
+}
+
+.flex-sbetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex__center--column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-left {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+/* elementos */
+.container {
+  display: flex;
+  justify-content: center;
+  /* align-items: flex-end; */
+  flex-direction: column;
+  /* margin: 100px auto; */
+}
+
+.container h1 {
+  font-size: 2.1rem;
+  margin-bottom: 50px;
+  text-decoration: underline;
+  color: rgb(240, 151, 50);
+}
+
+.container .intro {
+  font-size: 2rem;
+  margin-top: 100px;
+}
+
+.container .intro h1 {
+  /* margin-top: 180px; */
+  /* padding-top: 180px; */
+}
+
+.container .temas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  /* margin: 0 10px; */
+  /* margin-top: 100px; */
+  padding: 10px;
+}
+
+.container .temas button h2 {
+  /* width: 200px; */
+  color: #fff;
+  text-decoration: underline;
+  margin-top: 40px;
+  /* padding-top: 160px; */
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.container .temas .paradigmas {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #fff;
+  margin-bottom: 70px;
+  padding: 10px 20px;
+}
+
+.container .temas .paradigmas li {
+  list-style: circle;
+  padding: 10px;
+}
+
+.container .temas .paradigmas li p {
+  padding: 10px 0;
+}
+
+.container .temas p {
+  color: #fff;
+  line-height: 35px;
+}
+
+.container .temas p a {
+  color: #ff9100;
+}
+
+.container .temas p a span {
+  transition: ease-in 0.2s;
+  /* white-space: nowrap; */
+}
+
+.container .temas p a span:hover {
+  /* position: absolute; */
+  font-size: 2rem;
+}
+
+.container .temas h3 {
+  text-decoration: underline;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 50px;
+}
+
+.container .temas ul li {
+  color: #fff;
+}
+
+.container .temas .lenguajes li {
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+}
+
+.container p {
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.container p span {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.container header {
+  margin-top: 80px;
+}
+
+.container header nav ul {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 10px 0;
+  gap: 20px 0;
+  top: 50px;
+  right: 50px;
+  bottom: 100px;
+}
+
+.container header nav ul a {
+  width: 150px;
+  text-align: center;
+}
+
+.container header nav ul li {
+  border: 1px solid #fff;
+  padding: 20px;
+  border-radius: 20px;
+  color: #000;
+  background-color: #fff;
+}
+
+.container header nav ul:focus {
+  margin-bottom: 50px;
+}
+
+.container header nav ul img {
+  /* width: 50px; */
+}
+
+.container .enlace {
+  border: 2px solid #fff;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #535151;
+  color: #fff;
+  font-size: 1rem;
+  /* font-weight: bold; */
+  transition: ease-in 0.356s all;
+}
+
+.container .enlace:hover {
+  background-color: white;
+  color: #000;
+}
+
+.container .enlace__img {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 1px #fff;
+}
+
+.conclusion {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 20px;
+  margin: 15px;
+  /* border: 1px solid #fff; */
+  border-radius: 10px;
+}
+
+.conclusion p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.conclusion p:nth-child(3) {
+  text-decoration: underline;
+}
+
+.conclusion h1 {
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    align-items: center;
+  }
+  .container .temas {
+    width: 800px;
+  }
+  .conclusion {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin: 20px auto;
+    width: 800px;
+  }
+}/*# sourceMappingURL=Blog.module.css.map */

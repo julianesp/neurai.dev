@@ -2,16 +2,13 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
-
-// import Estudios from '../components/Estudios'
-
 import dev from '../assets/img/developer_2.jpg'
 import cirp from '../assets/img/empresas/cirp.png'
 import awaspa from '../assets/img/empresas/awaspa.png'
 import ase from '../assets/img/empresas/ase.jpg'
 import tecni from '../assets/img/education/tecnicosistemas.jpg'
 import tecno from '../assets/img/education/tecnologia.png'
-
+import store from '/public/images/store.png'
 import styles from '../styles/Profile.module.scss'
 
 const Profile = () => {
@@ -55,6 +52,12 @@ const Profile = () => {
                         src={dev}
                     />
                 </section>
+
+
+
+            </section>
+
+            <section className={styles.page}>
 
                 <section className={styles.study}>
 
@@ -105,47 +108,91 @@ const Profile = () => {
 
                 </section>
 
-            </section>
+                <section className={styles.portfolio}>
 
-            <section className={styles.portfolio}>
+                    <h3>Mis proyectos</h3>
 
-                <h3>Mis proyectos</h3>
+                    <div className={styles['portfolio__empresas']}>
+                        <div className={styles.empresa}>
+                            <Link href='https://julianesp.github.io/cirp/' target='_blank' rel='noreferrer'>
+                                <Image
+                                    src={cirp}
+                                    alt="Logo CIRP"
+                                    width={90}
+                                    height={90}
+                                />
+                            </Link>
 
-                <div className={styles['portfolio__empresas']}>
-                    <div className={styles.empresa}>
-                        <Link href='https://julianesp.github.io/cirp/' target='_blank' rel='noreferrer'>
-                            <Image
-                                src={cirp}
-                                alt="Logo CIRP"
-                                width={90}
-                                height={90}
-                            />
-                        </Link>
+                        </div>
 
+                        <div className={styles.empresa}>
+                            <Link href='https://julianesp.github.io/awaspa/' target='_blank' rel='noreferrer'>
+                                <Image
+                                    src={awaspa}
+                                    alt="Logo Awaspa"
+                                    width={90}
+                                    height={90}
+                                />
+                            </Link>
+                        </div>
+
+                        <div className={styles.empresa}>
+                            <Link href='https://julianesp.github.io/ase/' target='_blank' rel='noreferrer'>
+                                <Image
+                                    src={ase}
+                                    alt="Logo Awaspa"
+                                    width={90}
+                                    height={90}
+                                />
+                            </Link>
+                        </div>
                     </div>
+                </section>
 
-                    <div className={styles.empresa}>
-                        <Link href='https://julianesp.github.io/awaspa/' target='_blank' rel='noreferrer'>
-                            <Image
-                                src={awaspa}
-                                alt="Logo Awaspa"
-                                width={90}
-                                height={90}
-                            />
-                        </Link>
-                    </div>
+                <section className={styles.publicidad}>
+                    <article className={styles.negocio}>
+                        <h3>Muestra tu tienda</h3>
+                        <Image
+                            alt='negocio'
+                            src={store}
+                            width={90}
+                            height={90}
+                        />
 
-                    <div className={styles.empresa}>
-                        <Link href='https://julianesp.github.io/ase/' target='_blank' rel='noreferrer'>
-                            <Image
-                                src={ase}
-                                alt="Logo Awaspa"
-                                width={90}
-                                height={90}
-                            />
-                        </Link>
-                    </div>
-                </div>
+                        <button>
+                            Ver tienda
+                        </button>
+                    </article>
+
+                    <article className={styles.negocio}>
+                        <h3>Muestra tu tienda</h3>
+                        <Image
+                            alt='negocio'
+                            src={store}
+                            width={90}
+                            height={90}
+                        />
+
+                        <button>
+                            Ver tienda
+                        </button>
+                    </article>
+
+                    <article className={styles.negocio}>
+                        <h3>Muestra tu tienda</h3>
+                        <Image
+                            alt='negocio'
+                            src={store}
+                            width={90}
+                            height={90}
+                        />
+
+                        <button>
+                            Ver tienda
+                        </button>
+                    </article>
+
+                </section>
             </section>
 
         </>
