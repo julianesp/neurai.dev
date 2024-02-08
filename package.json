@@ -1,14 +1,12 @@
 {
-  "name": "neurai.shop",
+  "name": "neurai.dev",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://neurai.shop/",
+  "homepage": "https://neurai.dev/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:styles": "stylelint \"src/**/*.css\""
+    "lint": "next lint"
   },
   "dependencies": {
     "@next/font": "13.1.6",
